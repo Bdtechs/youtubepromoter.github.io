@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Views & Subscribe Increase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div class="home-page">
+        <header class="header">
+            <h1>Increase Views & Subscribe</h1>
+            <img src="youtube-logo.png" alt="YouTube Logo" class="youtube-logo">
+            <img src="growth-graph.png" alt="Growth Graph" class="growth-graph">
+            <a href="#channel-link-section" class="downward-arrow">↓</a>
+        </header>
+
+        <section id="channel-link-section" class="channel-link-section">
+            <h2>Enter Your YouTube Channel Link</h2>
+            <div class="input-box">
+                <input type="url" id="channelLink" placeholder="Paste your channel link here" />
+                <button id="nextButton">Next</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Second Page -->
+    <div id="second-page" class="second-page" style="display:none;">
+        <div class="channel-info">
+            <img src="channel-logo.png" alt="Channel Logo" class="channel-logo">
+            <h3 id="channel-name">Channel Name</h3>
+        </div>
+
+        <div class="stats-box">
+            <div class="box" id="points-box">
+                <p>Points: <span id="userPoints">0</span></p>
+            </div>
+            <div class="box" id="earn-box">
+                <p>Earn Points</p>
+            </div>
+            <div class="box" id="views-subs-box">
+                <p>Views & Subscribe Increase</p>
+            </div>
+        </div>
+
+        <div class="how-it-works">
+            <h4>How Our Website Works</h4>
+            <p>Our platform helps users increase views and subscribers on their YouTube channels. You can earn points by subscribing to other channels, watching videos, and completing tasks.</p>
+        </div>
+
+        <a href="javascript:void(0);" class="go-back" onclick="goBack()">Go Back</a>
+    </div>
+
+    <!-- Earn Points Page -->
+    <div id="earn-points-page" class="earn-points-page" style="display:none;">
+        <h2>Earn Points</h2>
+        <div id="user-tasks">
+            <!-- Dynamic User Tasks List Will Appear Here -->
+        </div>
+        <a href="javascript:void(0);" class="go-back" onclick="goBack()">Go Back</a>
+    </div>
+
+    <!-- Add Task Layout -->
+    <div id="add-task-layout" class="add-task-layout" style="display:none;">
+        <h3>Increase Views or Subscribers</h3>
+        <div id="subscribe-task">
+            <label for="subscribe-number">How many subscribers?</label>
+            <input type="number" id="subscribe-number" placeholder="Enter number of subscribers" />
+            <p>Points: <span id="subscribe-points">0</span></p>
+            <button id="add-subscribe-task" disabled>Add Task</button>
+        </div>
+        <div id="views-task">
+            <label for="views-number">How many views?</label>
+            <input type="number" id="views-number" placeholder="Enter number of views" />
+            <p>Points: <span id="views-points">0</span></p>
+            <button id="add-views-task" disabled>Add Task</button>
+        </div>
+        <a href="javascript:void(0);" class="go-back" onclick="goBack()">Go Back</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
